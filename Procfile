@@ -1,1 +1,1 @@
-web: bin/hubot -a spark
+web: bin/hubot -a sparkwebhook
