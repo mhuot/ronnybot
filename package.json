@@ -6,6 +6,7 @@
   "description": "OpenNMS bot to help keep monitoring simple.",
   "dependencies": {
     "axios": "^0.16.2",
+    "ciscospark-websocket-events": "^1.2.0",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-google-images": "^0.2.7",
@@ -19,9 +20,9 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
     "hubot-sparkwebhook": "^0.1.3",
-    "hubot-startup": "git://github.com/bouzuya/hubot-startup.git",
+    "import-export": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
-    "opennms": "git+https://github.com/OpenNMS/opennms-js.git#master"
+    "opennms": "^1.0-alpha.3"
   },
   "engines": {
     "node": "0.10.x"
