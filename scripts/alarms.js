@@ -7,7 +7,8 @@ const Restriction = opennms.API.Restriction;
 
 
 function connection() {
-  return new Client().connect('Demo', 'https://demo.opennms.org/opennms', 'demo', 'demo').then((client) => {
+  return new Client().connect('Demo', 'http://centos6-1.local:8980/opennms', 'admin', 'admin').then((client) => {
+  //return new Client().connect('Demo', 'https://demo.opennms.org/opennms', 'demo', 'demo').then((client) => {
     return client;
   });
 }
@@ -48,7 +49,42 @@ function getnodes() {
   });
 }
 
+function getalarms() {
+  return connection().then((client) => {
+    return client.alarms().find().then((alarms) => {
+      return alarms;
+    }); 
+  }).catch((err) => {
+    console.log('error:',err);
+    console.log(err.stack);
+    throw err;
+  });
+}
+
+function ackalarm(msg) {
+  id = msg.match[1];
+  msg.reply('Let me see if I can find alarm # ' + id);
+  const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.EQ, id));
+  connection().then((client) => {
+    client.alarms().find(filter).then((alarms) => {
+      if(alarms.length = 1) {
+        alarms.forEach((alarm) => {
+          msg.reply('Is this it - ')
+          msg.reply(alarm.description);
+          msg.reply('Please confirm this is the alarm you would like to ack by saying yes.')
+        });
+      } else {
+        msg.reply('Something went wrong.');
+      }
+    });
+  });
+}
+
 module.exports = function(robot) {
+  robot.respond(/ack alarm (\d+)/i, function(msg) {
+    ackalarm(msg);
+  });
+
   robot.respond(/alarm count/i, function(msg){
   	msg.reply('Let me check...');
       alarmcount().then(function(count) {
@@ -75,7 +111,17 @@ module.exports = function(robot) {
   });
   
   robot.respond(/getalarms/i, function(msg){
-        msg.reply("Here are the 10 most recent alarms - \nAlarm ID - 409058 Severity - Minor Node - marvin.internal.opennms.com Count - 1 Last - Jul 20, 2017 12:15:48 PM Log Message - Update outage identified on interface 172.20.1.17.");
+    msg.reply('Let me check...');
+      getalarms().then(function(alarms) {
+        if (alarms.length > 0) {
+          msg.reply('Here are the first 10 --')
+          alarms.forEach((alarm) => {
+            msg.reply('Node ID ' + alarm.id + ' - ' + alarm.description);
+          });
+        } else {
+          msg.reply('There are no alarms at this time');
+        }
+    });
   });
 }
 
