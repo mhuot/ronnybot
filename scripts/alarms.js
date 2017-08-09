@@ -7,8 +7,7 @@ const Restriction = opennms.API.Restriction;
 
 
 function connection() {
-  return new Client().connect('Demo', 'http://centos6-1.local:8980/opennms', 'admin', 'admin').then((client) => {
-  //return new Client().connect('Demo', 'https://demo.opennms.org/opennms', 'demo', 'demo').then((client) => {
+  return new Client().connect('Demo', 'https://demo.opennms.org/opennms', 'demo', 'demo').then((client) => {
     return client;
   });
 }
