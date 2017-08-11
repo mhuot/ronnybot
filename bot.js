@@ -29,60 +29,23 @@ const Comparators = opennms.API.Comparators;
 const Filter = opennms.API.Filter;
 const Restriction = opennms.API.Restriction;
 
+const connection = () => new Client().connect('Home', 'http://centos6-1.local:8980/opennms', 'admin', 'admin');
 
-function connection() {
-  return new Client().connect('Home', 'http://centos6-1.local:8980/opennms', 'admin', 'admin').then((client) => {
-    return client;
-  });
-}
+const alarmCount = () => connection().then(client =>
+  client.alarms().find().then(alarms => `There are #{alarms.length} alarms.`)
+  ).catch(err => { throw err; });
 
-function alarmcount() {
-  return connection().then((client) => {
-    return client.alarms().find().then((alarms) => {
-      return('There are ' + alarms.length + ' alarms.');
-    });
-  }).catch((err) => {
-    console.log('error:',err);
-    console.log(err.stack);
-    throw err;
-  });
-}
+const nodeCount = () => connection().then(client =>
+  client.nodes().find().then(nodes => `There are #{nodes.length} nodes`)
+  ).catch(err => { throw err; });
 
-function nodecount() {
-  return connection().then((client) => {
-    return client.nodes().find().then((nodes) => {
-      return('There are ' + nodes.length + ' nodes.');
-    });
-  }).catch((err) => {
-    console.log('error:',err);
-    console.log(err.stack);
-    throw err;
-  });
-}
+const getNodes = () => connection().then(client =>
+  client.nodes().find().then(nodes)
+  ).catch(err => { throw err; });
 
-function getnodes() {
-  return connection().then((client) => {
-    return client.nodes().find().then((nodes) => {
-      return nodes;
-    });
-  }).catch((err) => {
-    console.log('error:',err);
-    console.log(err.stack);
-    throw err;
-  });
-}
-
-function getalarms() {
-  return connection().then((client) => {
-    return client.alarms().find().then((alarms) => {
-      return alarms;
-    });
-  }).catch((err) => {
-    console.log('error:',err);
-    console.log(err.stack);
-    throw err;
-  });
-}
+const getAlarms = () => connection().then(client =>
+  client.alarms().find().then(alarms)
+  ).catch(err => { throw err; });
 
 function ackalarm(msg) {
   id = msg.match[1];
@@ -135,26 +98,31 @@ controller.hears('hello', 'direct_message,direct_mention', function (bot, messag
 });
 
 controller.hears('get alarms', 'direct_message,direct_mention', function (bot, message) {
-    bot.reply(message, 'Let me check...');
-    getalarms().then(function(alarms) {
+  bot.startConversation(message, (errno, convo) => {
+    convo.say('Let me check...');
+    getAlarms().then(alarms => {
       if (alarms.length > 0) {
-        bot.reply(message, 'Here are the first 10 --');
-        alarms.forEach((alarm) => {
-          bot.reply(message, 'Alarm ID ' + alarm.id + ' - ' + alarm.description);
-        });
+        convo.say('Here are the first 10 --');
+        alarms.forEach(alarm => {
+          convo.say(`Alarm ID ${alarm.id} - ${alarm.description}`);
+        })
       } else {
-        bot.reply(message, 'There are no alarms at this time');
+         convo.say(`There are no alarms at this time.`);
       }
+      convo.say('---');
     });
+  });
 });
 
 controller.hears('get nodes', 'direct_message,direct_mention', function (bot, message) {
-  bot.reply(message, 'Let me check...');
-    getnodes().then(function(nodes) {
-      bot.reply(message, 'Here are the first 10 --');
-      nodes.forEach((node) => {
-        bot.reply(message, 'Node ID ' + node.id + ' - ' + node.label);
+  bot.startConversation(message, (errno, convo) => {
+    convo.say('Let me check...');
+    getNodes().then(nodes => {                          
+      convo.say('Here are the first 10 --');
+      nodes.forEach(node => {
+        convo.say(`Node ID ${node.id} - ${node.label}`);
       });
+    });
   });
 });
 
