@@ -1,18 +1,17 @@
-/**
- * Cisco Spark WebSocket example using BotKit
- */
+const opennms = require('opennms/dist/opennms.node');
+const SparkWebSocket = require('ciscospark-websocket-events');
+const Botkit = require('botkit');
 
-var accessToken = process.env.SPARK_TOKEN;
+const accessToken = process.env.SPARK_TOKEN;
 if (!accessToken) {
     console.log("No Cisco Spark access token found in env variable SPARK_TOKEN");
     process.exit(2);
 }
 
-var PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 
 // Spark Websocket Intialization
-var SparkWebSocket = require('ciscospark-websocket-events');
 sparkwebsocket = new SparkWebSocket(accessToken);
 sparkwebsocket.connect(function (err, res) {
     if (!err) {
@@ -24,7 +23,6 @@ sparkwebsocket.connect(function (err, res) {
 })
 
 //////// OpenNMS //////
-const opennms = require('opennms/dist/opennms.node');
 
 const Client = opennms.Client;
 const Comparators = opennms.API.Comparators;
@@ -107,16 +105,14 @@ function ackalarm(msg) {
 
 //////// Bot Kit //////
 
-var Botkit = require('botkit');
-
-var controller = Botkit.sparkbot({
+const controller = Botkit.sparkbot({
     debug: true,
     log: true,
     public_address: "https://localhost",
     ciscospark_access_token: accessToken
 });
 
-var bot = controller.spawn({
+const bot = controller.spawn({
 });
 
 controller.setupWebserver(PORT, function (err, webserver) {
