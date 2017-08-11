@@ -1,0 +1,3254 @@
+{
+  "devices": [
+    {
+      "id": "4c72c36b4bfd44358d34f06637adf360",
+      "device": {
+        "url": "https://wdm-a.wbx2.com/wdm/api/v1/devices/9a1d52a5-e137-4643-b759-e74cc790cdd8",
+        "webSocketUrl": "wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/0bf24dc2-b4a3-475e-8c62-ff1b09c0bb22/messages",
+        "services": {
+          "conversationServiceUrl": "https://conv-a.wbx2.com/conversation/api/v1",
+          "roomServiceUrl": "https://lyra-a.wbx2.com/lyra/api/v1",
+          "locusServiceUrl": "https://locus-a.wbx2.com/locus/api/v1",
+          "avatarServiceUrl": "https://avatar-a.wbx2.com/avatar/api/v1",
+          "metricsServiceUrl": "https://metrics-a.wbx2.com/metrics/api/v1",
+          "encryptionServiceUrl": "https://encryption-a.wbx2.com/encryption/api/v1",
+          "atlasServiceUrl": "https://atlas-a.wbx2.com/admin/api/v1",
+          "filesServiceUrl": "https://files-api-a.wbx2.com/v1",
+          "squaredFilesServiceUrl": "https://files-api-a.wbx2.com/v1",
+          "featureServiceUrl": "https://feature-a.wbx2.com/feature/api/v1",
+          "swupgradeServiceUrl": "https://client-upgrade-a5.wbx2.com/client-upgrade/api/v1",
+          "calendarServiceUrl": "https://calendar-a.wbx2.com/calendar/api/v1",
+          "raindropServiceUrl": "https://raindrop-a.wbx2.com/raindrop/api/v1",
+          "wdmServiceUrl": "https://wdm-a.wbx2.com/wdm/api/v1",
+          "janusServiceUrl": "https://janus-a.wbx2.com/janus/api/v1",
+          "hydraServiceUrl": "https://hydra-a.wbx2.com/v1",
+          "identityLookupServiceUrl": "https://conv-a.wbx2.com/conversation/api/v1",
+          "argonautServiceUrl": "https://argonaut-a.wbx2.com/argonaut/api/v1",
+          "apheleiaServiceUrl": "https://apheleia-a.wbx2.com/apheleia/api/v1",
+          "mercuryConnectionServiceUrl": "https://mercury-connection-a.wbx2.com/v1",
+          "calliopeDiscoveryServiceUrl": "https://calliope-a.wbx2.com/calliope/api/discovery/v1",
+          "hecateServiceUrl": "https://hecate-a.wbx2.com/hecate/api/v1",
+          "boardServiceUrl": "https://board-a.wbx2.com/board/api/v1",
+          "userAppsServiceUrl": "https://raindrop-a.wbx2.com/user/api/v1/apps",
+          "lyraServiceUrl": "https://lyra-a.wbx2.com/lyra/api/v1",
+          "proximityServiceUrl": "https://proximity-a.wbx2.com/proximity/api/v1",
+          "voicemailServiceUrl": "https://ucc-a.wbx2.com/voicemail/api/v1",
+          "aclServiceUrl": "https://acl-a.wbx2.com/acl/api/v1",
+          "mercuryAlternateDCServiceUrl": "https://mercury-connection-a.wbx2.com/v1",
+          "retentionServiceUrl": "https://retention-a5.wbx2.com/retention/api/v1",
+          "deviceManagementServiceUrl": "https://csdm-a.wbx2.com/csdm/api/v1",
+          "remoteDispatcherServiceUrl": "https://remote-dispatcher-a.wbx2.com/remote-dispatcher/api/v1"
+        },
+        "deviceType": "DESKTOP",
+        "name": "node-spark-client",
+        "model": "nodeJS",
+        "localizedModel": "nodeJS",
+        "systemName": "node-spark-client",
+        "systemVersion": "0.1",
+        "capabilities": {
+          "groupCallSupported": false,
+          "localNotificationSupported": false,
+          "deleteNotificationSupported": false,
+          "sdpSupported": true
+        },
+        "features": {
+          "developer": [
+            {
+              "key": "MarkdownMessageFeature",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-07-11T19:44:23.734Z"
+            },
+            {
+              "key": "admin-invite-ab-test",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-09T00:22:26.355Z"
+            },
+            {
+              "key": "android-add-guest-release",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-add-integrations-and-bots",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-01T20:59:12.742Z"
+            },
+            {
+              "key": "android-audio-only-calls",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-02T16:36:56.867Z"
+            },
+            {
+              "key": "android-calliope-discovery",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-06T22:37:40.436Z"
+            },
+            {
+              "key": "android-calls-tab",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T20:57:32.149Z"
+            },
+            {
+              "key": "android-contact-card",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T19:56:50.386Z"
+            },
+            {
+              "key": "android-cross-launch",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:37:06.955Z"
+            },
+            {
+              "key": "android-custom-notifications",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-14T18:27:26.054Z"
+            },
+            {
+              "key": "android-custom-notifications-global-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-15T23:26:42.984Z"
+            },
+            {
+              "key": "android-custom-room-avatars",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-11T14:55:56.430Z"
+            },
+            {
+              "key": "android-direct-share",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-07T16:06:59.331Z"
+            },
+            {
+              "key": "android-direct-upload",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-flag",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-22T19:39:59.716Z"
+            },
+            {
+              "key": "android-implicit-binding-for-call-release",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:39:47.847Z"
+            },
+            {
+              "key": "android-kms-messaging-api-v2",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-lyra-room-service",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-08-09T14:56:36.123Z"
+            },
+            {
+              "key": "android-mentions",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-message-search",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-modern-token-refresh",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "android-move-room-to-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:51:40.282Z"
+            },
+            {
+              "key": "android-native-client-lobby",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:34:42.137Z"
+            },
+            {
+              "key": "android-native-whiteboard-ga",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-21T21:42:31.286Z"
+            },
+            {
+              "key": "android-outbound-dialing",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-03-07T22:40:48.077Z"
+            },
+            {
+              "key": "android-presence-visuals",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:46:54.687Z"
+            },
+            {
+              "key": "android-quiet-time",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:42:18.416Z"
+            },
+            {
+              "key": "android-remove-room-from-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:54:04.913Z"
+            },
+            {
+              "key": "android-room-binding-release",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:39:15.688Z"
+            },
+            {
+              "key": "android-search-v2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:37:31.802Z"
+            },
+            {
+              "key": "android-search-v3",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:37:46.470Z"
+            },
+            {
+              "key": "android-search-v4",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:38:04.675Z"
+            },
+            {
+              "key": "android-short-term-space-meeting-link",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:37:29.787Z"
+            },
+            {
+              "key": "android-spaceballs-release",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:31:06.218Z"
+            },
+            {
+              "key": "android-spark-room-url",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:36:31.194Z"
+            },
+            {
+              "key": "android-spark-space-sipuri",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T16:41:06.490Z"
+            },
+            {
+              "key": "android-teams",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-09T20:05:12.999Z"
+            },
+            {
+              "key": "android-ultrasound-proximity-r1",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T20:58:37.663Z"
+            },
+            {
+              "key": "android-user-presence",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-20T16:50:02.685Z"
+            },
+            {
+              "key": "android-view-media",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-24T18:29:19.522Z"
+            },
+            {
+              "key": "android-volume-control-release",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:37:42.573Z"
+            },
+            {
+              "key": "android-whiteboard-ga",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-21T21:42:24.011Z"
+            },
+            {
+              "key": "api-rooms-sipuri-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-05T21:03:08.704Z"
+            },
+            {
+              "key": "assistant-service-bot-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ORG",
+              "percentage": 20,
+              "orgId": "consumer",
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-28T19:43:40.116Z"
+            },
+            {
+              "key": "at-mentions",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "atlas-care-proactiveChat-trials",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-20T19:00:12.626Z"
+            },
+            {
+              "key": "atlas-care-trials",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-10T20:33:47.270Z"
+            },
+            {
+              "key": "atlas-context-dictionary-edit",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-15T18:48:41.774Z"
+            },
+            {
+              "key": "atlas-create-trial-backend-email",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-20T20:04:39.392Z"
+            },
+            {
+              "key": "atlas-csv-enhancement",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-09-22T20:40:17.450Z"
+            },
+            {
+              "key": "atlas-devices-advanced-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-20T19:11:32.726Z"
+            },
+            {
+              "key": "atlas-f237-resource-group",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-31T07:43:09.940Z"
+            },
+            {
+              "key": "atlas-ftsw-remove-users-sso",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-02-17T19:48:59.118Z"
+            },
+            {
+              "key": "atlas-hercules-emergency-upgrade",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-21T12:31:59.353Z"
+            },
+            {
+              "key": "atlas-hercules-google-calendar",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-02T15:32:35.164Z"
+            },
+            {
+              "key": "atlas-hybrid-nodes-view",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-10T18:35:23.018Z"
+            },
+            {
+              "key": "atlas-hybrid-partner-registration",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-06T18:02:12.310Z"
+            },
+            {
+              "key": "atlas-hybrid-services-resource-list",
+              "val": "true",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-09-12T12:01:05.409Z"
+            },
+            {
+              "key": "atlas-idle-logout",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-20T20:51:30.886Z"
+            },
+            {
+              "key": "atlas-media-service-metrics",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-07T15:48:24.244Z"
+            },
+            {
+              "key": "atlas-media-service-onboarding",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-07T15:48:00.826Z"
+            },
+            {
+              "key": "atlas-notify-partner-trial-ext-backend-email",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-20T20:05:05.390Z"
+            },
+            {
+              "key": "atlas-online-users-to-convert",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-24T00:11:38.246Z"
+            },
+            {
+              "key": "atlas-phones-canada",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-30T21:16:17.976Z"
+            },
+            {
+              "key": "atlas-settings-page",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-09-22T20:40:45.091Z"
+            },
+            {
+              "key": "atlas-sip-address-change-for-username",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-29T00:32:19.191Z"
+            },
+            {
+              "key": "atlas-start-trial-for-paid",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-02-17T16:23:20.873Z"
+            },
+            {
+              "key": "atlas-subdomain-update",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-18T00:01:05.846Z"
+            },
+            {
+              "key": "atlas-tos-required",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-02-07T17:18:18.343Z"
+            },
+            {
+              "key": "bot-developer",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-07-11T19:44:35.246Z"
+            },
+            {
+              "key": "bridge-max-conv-participants",
+              "val": "25",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "calls-tab",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-03-07T22:40:47.549Z"
+            },
+            {
+              "key": "calsvc-set-org-level-default-sitename",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-02T16:41:59.962Z"
+            },
+            {
+              "key": "calsvc_detect_cmr_loc",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-28T19:09:30.797Z"
+            },
+            {
+              "key": "calsvc_kian_test",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-10T15:36:47.478Z"
+            },
+            {
+              "key": "calsvc_locus_meeting_link",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:38:50.921Z"
+            },
+            {
+              "key": "calsvc_webex_meeting_registries",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-24T19:48:12.113Z"
+            },
+            {
+              "key": "ce-audio-playout-delay-manager",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-05T21:10:02.988Z"
+            },
+            {
+              "key": "ce-calliope-discovery",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-02T19:27:32.622Z"
+            },
+            {
+              "key": "ce-enable-bluetooth-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-07T21:24:48.329Z"
+            },
+            {
+              "key": "ce-enable-halfwake",
+              "val": "on",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2017-06-28T19:09:12.598Z"
+            },
+            {
+              "key": "ce-lyra-api-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-28T14:38:39.895Z"
+            },
+            {
+              "key": "ce-slowstart",
+              "val": "on",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2017-06-19T20:24:23.571Z"
+            },
+            {
+              "key": "chrome-video-fix-disable",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-07T20:03:11.213Z"
+            },
+            {
+              "key": "client-ringback-v2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-29T17:50:28.420Z"
+            },
+            {
+              "key": "contact-center-context",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-15T18:48:52.671Z"
+            },
+            {
+              "key": "conversation-acl-write",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-09-30T21:32:25.431Z"
+            },
+            {
+              "key": "conversation-streams",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T20:59:53.790Z"
+            },
+            {
+              "key": "csdm-places",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-23T00:17:32.221Z"
+            },
+            {
+              "key": "csdm-pstn",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-27T04:14:28.914Z"
+            },
+            {
+              "key": "delete-content",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "desktop-add-integrations-and-bots",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-01T20:57:57.961Z"
+            },
+            {
+              "key": "desktop-auto-join",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-26T20:10:21.577Z"
+            },
+            {
+              "key": "desktop-bind",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:38:28.301Z"
+            },
+            {
+              "key": "desktop-bind-implicit",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:38:51.918Z"
+            },
+            {
+              "key": "desktop-cloudberry-mute",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:34:55.606Z"
+            },
+            {
+              "key": "desktop-custom-notifications",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-14T18:26:57.738Z"
+            },
+            {
+              "key": "desktop-custom-notifications-global-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-14T18:26:35.280Z"
+            },
+            {
+              "key": "desktop-default-avatar-with-initial",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:39:21.595Z"
+            },
+            {
+              "key": "desktop-enable-filmstrip",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-29T23:57:03.779Z"
+            },
+            {
+              "key": "desktop-flags",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-22T19:39:08.114Z"
+            },
+            {
+              "key": "desktop-guest-share-screen",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-17T15:29:15.384Z"
+            },
+            {
+              "key": "desktop-healthcheck-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-26T19:35:50.896Z"
+            },
+            {
+              "key": "desktop-huron-calls",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-07-12T18:45:28.793Z"
+            },
+            {
+              "key": "desktop-markdown-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-26T23:57:03.468Z"
+            },
+            {
+              "key": "desktop-meeting-controls",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:37:58.026Z"
+            },
+            {
+              "key": "desktop-mini-profile",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-07T19:16:03.533Z"
+            },
+            {
+              "key": "desktop-move-room-to-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:52:30.869Z"
+            },
+            {
+              "key": "desktop-native-client-lobby",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:34:01.004Z"
+            },
+            {
+              "key": "desktop-new-media-reconnect",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:55:03.039Z"
+            },
+            {
+              "key": "desktop-presence-opt-out",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-19T15:51:46.253Z"
+            },
+            {
+              "key": "desktop-presence-visuals",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:44:19.692Z"
+            },
+            {
+              "key": "desktop-prominent-share",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-11T21:58:41.340Z"
+            },
+            {
+              "key": "desktop-proximity-device-selection",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-06T22:19:16.637Z"
+            },
+            {
+              "key": "desktop-quiet-time",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:41:39.614Z"
+            },
+            {
+              "key": "desktop-room-avatarV2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-11T14:56:51.856Z"
+            },
+            {
+              "key": "desktop-search-modifiers",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:38:51.742Z"
+            },
+            {
+              "key": "desktop-spark-room-url",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:35:07.993Z"
+            },
+            {
+              "key": "desktop-teams",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-09T20:05:56.833Z"
+            },
+            {
+              "key": "desktop-ultrasound-proximity",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-06T22:19:12.144Z"
+            },
+            {
+              "key": "desktop-user-presence",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-19T15:51:15.884Z"
+            },
+            {
+              "key": "desktop-ux-people-spaces",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:45:39.210Z"
+            },
+            {
+              "key": "desktop-ux-room-creation-pre-production",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:44:06.315Z"
+            },
+            {
+              "key": "desktop-video-address",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T16:39:29.178Z"
+            },
+            {
+              "key": "desktop-whiteboard",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:33:32.154Z"
+            },
+            {
+              "key": "desktop-whiteboard-acl",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:34:25.721Z"
+            },
+            {
+              "key": "desktop-whiteboard-share",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:33:56.605Z"
+            },
+            {
+              "key": "desktop-wireless-share",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-06T22:19:18.807Z"
+            },
+            {
+              "key": "dial-out",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-03-07T22:40:47.060Z"
+            },
+            {
+              "key": "dial-timeout-seconds",
+              "val": "60",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-11-14T19:20:22.843Z"
+            },
+            {
+              "key": "dpc-callee",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-02T19:08:03.870Z"
+            },
+            {
+              "key": "dpc-device-event",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-02T19:08:28.440Z"
+            },
+            {
+              "key": "dpc-phone-initiated",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-20T16:26:17.263Z"
+            },
+            {
+              "key": "enforce-filename-encryption",
+              "val": "true",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T18:06:59.541Z"
+            },
+            {
+              "key": "feature-toggle-rules",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "file-malware-detection-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-01T19:04:51.528Z"
+            },
+            {
+              "key": "filter-badges",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "fmc-command-dispatch",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-12T20:24:24.020Z"
+            },
+            {
+              "key": "huron-customer-admin-pmp",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-11T17:59:17.447Z"
+            },
+            {
+              "key": "huron-support-for-thinktel",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-30T21:16:42.346Z"
+            },
+            {
+              "key": "huronDateTimeEnable",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-01T19:52:45.421Z"
+            },
+            {
+              "key": "hybrid-service",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-27T14:23:39.890Z"
+            },
+            {
+              "key": "ios-action-bar",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-activity-dashboard2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:31:45.489Z"
+            },
+            {
+              "key": "ios-add-integrations-and-bots",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-01T20:57:21.581Z"
+            },
+            {
+              "key": "ios-bind-implicit",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:40:45.709Z"
+            },
+            {
+              "key": "ios-board-acl",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:37:11.543Z"
+            },
+            {
+              "key": "ios-calliope-discovery",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-06T22:46:00.230Z"
+            },
+            {
+              "key": "ios-calls-tab",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-03-07T22:40:46.541Z"
+            },
+            {
+              "key": "ios-co-branding",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-contact-card",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T19:56:14.362Z"
+            },
+            {
+              "key": "ios-custom-notifications",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-20T22:39:23.375Z"
+            },
+            {
+              "key": "ios-custom-notifications-global-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-15T23:28:00.536Z"
+            },
+            {
+              "key": "ios-custom-room-avatar3",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-11T14:46:54.325Z"
+            },
+            {
+              "key": "ios-darling-whiteboard2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:35:17.371Z"
+            },
+            {
+              "key": "ios-diagnostic-events-2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-28T17:24:47.044Z"
+            },
+            {
+              "key": "ios-do-not-disturb-settings-v2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:43:08.427Z"
+            },
+            {
+              "key": "ios-dropdown-filter-list",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:32:10.152Z"
+            },
+            {
+              "key": "ios-dynamic-type",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-15T14:53:24.611Z"
+            },
+            {
+              "key": "ios-file-upload-operation",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-01T16:46:43.531Z"
+            },
+            {
+              "key": "ios-filter-badges",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-hw-encoding",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-21T16:32:57.983Z"
+            },
+            {
+              "key": "ios-important-filter",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-important-filter2",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-11T19:10:41.086Z"
+            },
+            {
+              "key": "ios-initial-avatar",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:41:17.933Z"
+            },
+            {
+              "key": "ios-kms-messaging-api4",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-locus-moderator-control",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-22T15:10:54.548Z"
+            },
+            {
+              "key": "ios-locus-using-resource",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-31T15:11:21.909Z"
+            },
+            {
+              "key": "ios-lyra-api-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-14T17:22:39.304Z"
+            },
+            {
+              "key": "ios-lyra-call-volume-control",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:38:04.962Z"
+            },
+            {
+              "key": "ios-mentions",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-mentions-filter",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-message-flagging2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-22T19:41:01.260Z"
+            },
+            {
+              "key": "ios-move-room-into-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:51:12.830Z"
+            },
+            {
+              "key": "ios-native-client-lobby",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:34:26.003Z"
+            },
+            {
+              "key": "ios-outbound-dialing",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T20:59:29.615Z"
+            },
+            {
+              "key": "ios-presence-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-20T16:49:44.349Z"
+            },
+            {
+              "key": "ios-presence-visuals",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-17T22:27:24.808Z"
+            },
+            {
+              "key": "ios-proximity-fte",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:41:12.896Z"
+            },
+            {
+              "key": "ios-reconnect-sound",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:55:33.322Z"
+            },
+            {
+              "key": "ios-remove-room-from-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:53:03.443Z"
+            },
+            {
+              "key": "ios-room-binding",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:40:19.336Z"
+            },
+            {
+              "key": "ios-search-file",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:39:17.026Z"
+            },
+            {
+              "key": "ios-search-modifiers",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-16T19:38:34.367Z"
+            },
+            {
+              "key": "ios-search-service2",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "ios-spark-room-url",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:36:18.535Z"
+            },
+            {
+              "key": "ios-spark-space-sipuri",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T16:41:40.578Z"
+            },
+            {
+              "key": "ios-teams-2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-09T20:04:48.685Z"
+            },
+            {
+              "key": "ios-teams2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-09T20:21:55.026Z"
+            },
+            {
+              "key": "ios-transcoded-file-zoom",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-12T20:40:14.666Z"
+            },
+            {
+              "key": "ios-ultrasound-proximity",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T18:40:57.720Z"
+            },
+            {
+              "key": "ios-view-media",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-24T18:29:37.954Z"
+            },
+            {
+              "key": "joinhub-create-a-room",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "l2sip-huron-clouduri",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "locus-allow-spark-neo-meeting",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:38:21.554Z"
+            },
+            {
+              "key": "locus-disable-media-inactivity",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-14T17:56:04.154Z"
+            },
+            {
+              "key": "locus-max-roster-participants",
+              "val": "3",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "mac-contact-card",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-07T19:16:44.468Z"
+            },
+            {
+              "key": "mac-invite-toolbar-button-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ORG",
+              "percentage": 100,
+              "orgId": "consumer",
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T20:57:22.278Z"
+            },
+            {
+              "key": "mac-invite-toolbar-button-percentage",
+              "val": "100",
+              "mutable": true,
+              "group": "ORG",
+              "percentage": 100,
+              "orgId": "consumer",
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-18T21:33:57.435Z"
+            },
+            {
+              "key": "markdown-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-26T23:56:27.730Z"
+            },
+            {
+              "key": "media-desktop-ui-filter-red-border",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-18T17:19:01.391Z"
+            },
+            {
+              "key": "media-enable-audio-local-mixing",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-10T19:53:02.104Z"
+            },
+            {
+              "key": "media-mari-rate-adaptation",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2017-04-06T20:26:58.740Z"
+            },
+            {
+              "key": "meet-url-enabled",
+              "value": false,
+              "val": "false",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "meet-url-max-conv-participants",
+              "val": "0",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "meet-url-one-on-one-enabled",
+              "value": false,
+              "val": "false",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "mentions-notif",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-10T00:30:50.602Z"
+            },
+            {
+              "key": "mentions-tab",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "mercury5.1",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "mute-by-default",
+              "val": "true",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T19:09:05.026Z"
+            },
+            {
+              "key": "new-message-banner",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "new-message-banner-android",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "numeric-dialing",
+              "value": false,
+              "val": "false",
+              "mutable": false,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "osx-calliope-discovery",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-06T22:36:47.820Z"
+            },
+            {
+              "key": "osx-important-filter",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-11T19:10:57.799Z"
+            },
+            {
+              "key": "osx-wme-alpha-aec",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-07-11T16:17:09.107Z"
+            },
+            {
+              "key": "people-presence",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-21T16:29:48.954Z"
+            },
+            {
+              "key": "provisioning-status",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-24T22:54:29.859Z"
+            },
+            {
+              "key": "relevant-rooms",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-11T19:11:13.924Z"
+            },
+            {
+              "key": "remove-file-sync",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-27T15:01:03.126Z"
+            },
+            {
+              "key": "replace-default-avatar",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-30T15:40:15.981Z"
+            },
+            {
+              "key": "search-remote",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "search-tab",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "spark-guest-call",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "spark-js-sdk-ecdh-3",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "sparkboard-camera-sleep-Latest",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-10T15:39:37.023Z"
+            },
+            {
+              "key": "sparkboard-enable-crash-reporting-Latest",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-19T10:36:19.187Z"
+            },
+            {
+              "key": "sparkboard-enable-hdmi-audio",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-04T09:51:03.913Z"
+            },
+            {
+              "key": "sparkboard-enable-hdmi-audio-Beta",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-12T14:34:05.405Z"
+            },
+            {
+              "key": "sparkboard-enable-hdmi-audio-Latest",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-19T10:57:48.816Z"
+            },
+            {
+              "key": "sparkboard-enable-translations-Beta",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-20T14:35:17.455Z"
+            },
+            {
+              "key": "sparkboard-enable-translations-Stable",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-13T15:16:52.423Z"
+            },
+            {
+              "key": "sparkboard-manual-ip",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-06T08:15:34.506Z"
+            },
+            {
+              "key": "sparkboard-manual-ip-Beta",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-05-22T11:01:21.332Z"
+            },
+            {
+              "key": "sparkboard-proxy-support-Beta",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-24T11:27:30.009Z"
+            },
+            {
+              "key": "sparkboard-save-to-spark",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-07T13:51:44.097Z"
+            },
+            {
+              "key": "sparkboard-save-to-spark-Latest",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-03-21T05:39:53.630Z"
+            },
+            {
+              "key": "sparkboard-use-whiteboard-loader",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 0,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-04-19T16:26:38.044Z"
+            },
+            {
+              "key": "sparkboard-wifi-settings-Beta",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-08-07T15:50:37.208Z"
+            },
+            {
+              "key": "teams-streaming",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-14T16:55:28.074Z"
+            },
+            {
+              "key": "test-feature-for-multiple-rules1",
+              "val": "false",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-18T22:41:52.243Z"
+            },
+            {
+              "key": "test-feature-for-multiple-rules2",
+              "val": "false",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-18T22:41:52.243Z"
+            },
+            {
+              "key": "title-encryption",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "user-presence",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-21T16:42:43.199Z"
+            },
+            {
+              "key": "user-presence-calfusion-sync",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-02-15T23:45:37.479Z"
+            },
+            {
+              "key": "uwp-important-filter",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-11T19:11:26.296Z"
+            },
+            {
+              "key": "wdm-multi-dc-service-mercuryConnection",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-29T23:08:27.676Z"
+            },
+            {
+              "key": "wdm-u2c-lookup2",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-26T19:56:04.188Z"
+            },
+            {
+              "key": "web-activityux",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:32:57.636Z"
+            },
+            {
+              "key": "web-add-integrations-and-bots",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-01T20:58:39.640Z"
+            },
+            {
+              "key": "web-custom-notifications",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-14T18:28:09.970Z"
+            },
+            {
+              "key": "web-custom-notifications-global-settings",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-11-15T23:28:25.104Z"
+            },
+            {
+              "key": "web-custom-room-avatar",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-11T14:55:31.468Z"
+            },
+            {
+              "key": "web-flagging",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-08-22T19:42:11.531Z"
+            },
+            {
+              "key": "web-guest-call",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "web-huron-calls",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-07-12T18:46:04.015Z"
+            },
+            {
+              "key": "web-markdown-enabled",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-18T18:54:59.425Z"
+            },
+            {
+              "key": "web-mentions-tab",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "web-move-room-into-team",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-31T22:53:34.592Z"
+            },
+            {
+              "key": "web-outbound-dialing",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-03-07T22:40:49.020Z"
+            },
+            {
+              "key": "web-presence-visuals",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "lastModified": "2017-07-18T21:22:11.909Z"
+            },
+            {
+              "key": "web-quiet-time",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-01-24T18:43:30.689Z"
+            },
+            {
+              "key": "web-spark-space-meetings-url",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T16:42:22.290Z"
+            },
+            {
+              "key": "web-spark-space-sipuri",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2017-06-23T16:42:50.153Z"
+            },
+            {
+              "key": "web-teams",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-06-09T20:05:30.971Z"
+            },
+            {
+              "key": "web-user-presence",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-12-20T16:49:53.973Z"
+            },
+            {
+              "key": "win-calliope-discovery",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-10-06T22:37:17.451Z"
+            },
+            {
+              "key": "win-guest-call",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-10T05:37:52.491Z",
+              "type": "DEV"
+            },
+            {
+              "key": "win-important-filter",
+              "val": "false",
+              "mutable": false,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": false,
+              "lastModified": "2016-05-11T19:11:40.224Z"
+            },
+            {
+              "key": "win-mentions-list",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "win-mentions-tab",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "DEV"
+            },
+            {
+              "key": "win-outbound-dialing",
+              "val": "true",
+              "mutable": true,
+              "group": "ALL",
+              "percentage": 100,
+              "type": "DEV",
+              "deletedTime": 0,
+              "value": true,
+              "lastModified": "2016-05-11T20:59:10.201Z"
+            }
+          ],
+          "entitlement": [
+            {
+              "key": "call-initiation",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-11T01:47:28.560Z",
+              "type": "DEV"
+            },
+            {
+              "key": "spark",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-11T01:47:28.560Z",
+              "type": "DEV"
+            },
+            {
+              "key": "webex-squared",
+              "value": true,
+              "val": "true",
+              "mutable": false,
+              "lastModified": "2017-08-11T01:47:28.560Z",
+              "type": "DEV"
+            }
+          ],
+          "user": [
+            {
+              "key": "direct-message-notifications",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.568Z",
+              "type": "USER"
+            },
+            {
+              "key": "group-message-notifications",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "USER"
+            },
+            {
+              "key": "mention-notifications",
+              "value": true,
+              "val": "true",
+              "mutable": true,
+              "lastModified": "2017-08-11T01:47:28.569Z",
+              "type": "USER"
+            }
+          ]
+        },
+        "creationTime": "2017-08-11T01:47:28.560Z",
+        "modificationTime": "2017-08-11T01:47:28.560Z",
+        "deviceSettings": {},
+        "deviceSettingsString": "{}",
+        "showSupportText": false,
+        "reportingSiteUrl": "",
+        "reportingSiteDesc": "",
+        "isDeviceManaged": false,
+        "mediaClusters": {},
+        "trainSiteNames": [],
+        "serviceHostMap": {
+          "serviceLinks": {
+            "argonaut": "https://argonaut-a.wbx2.com/argonaut/api/v1",
+            "wdm": "https://wdm-a.wbx2.com/wdm/api/v1",
+            "remoteDispatcher": "https://remote-dispatcher-a.wbx2.com/remote-dispatcher/api/v1",
+            "atlas": "https://atlas-a.wbx2.com/admin/api/v1",
+            "userApps": "https://raindrop-a.wbx2.com/user/api/v1/apps",
+            "acl": "https://acl-a.wbx2.com/acl/api/v1",
+            "fms": "https://hercules-a.wbx2.com/v1",
+            "lyra": "https://lyra-a.wbx2.com/lyra/api/v1",
+            "hydra": "https://hydra-a.wbx2.com/v1",
+            "encryption": "https://encryption-a.wbx2.com/encryption/api/v1",
+            "feature": "https://feature-a.wbx2.com/feature/api/v1",
+            "identity": "https://identity.webex.com",
+            "mercuryConnection": "wss://mercury-connection-a.wbx2.com/v1",
+            "swupgrade": "https://client-upgrade-a.wbx2.com/client-upgrade/api/v1",
+            "conversation": "https://conv-a.wbx2.com/conversation/api/v1",
+            "retention": "https://retention-a.wbx2.com/retention/api/v1",
+            "calendar": "https://calendar-a.wbx2.com/calendar/api/v1",
+            "voicemail": "https://ucc-a.wbx2.com/voicemail/api/v1",
+            "avatar": "https://avatar-a.wbx2.com/avatar/api/v1",
+            "calliopeDiscovery": "https://calliope-a.wbx2.com/calliope/api/discovery/v1",
+            "acl-read": "https://acl-read-a.wbx2.com/acl/api/v1",
+            "identityLookup": "https://conv-a.wbx2.com/conversation/api/v1",
+            "raindrop": "https://raindrop-a.wbx2.com/raindrop/api/v1",
+            "acl-write": "https://acl-write-a.wbx2.com/acl/api/v1",
+            "idbroker": "https://idbroker.webex.com",
+            "proximity": "https://proximity-a.wbx2.com/proximity/api/v1",
+            "janus": "https://janus-a.wbx2.com/janus/api/v1",
+            "apheleia": "https://apheleia-a.wbx2.com/apheleia/api/v1",
+            "files": "https://files-api-a.wbx2.com/v1",
+            "hecate": "https://hecate-a.wbx2.com/hecate/api/v1",
+            "locus": "https://locus-a.wbx2.com/locus/api/v1",
+            "metrics": "https://metrics-a.wbx2.com/metrics/api/v1",
+            "mashups": "https://mashups-a.wbx2.com/mashups/api/v1",
+            "board": "https://board-a.wbx2.com/board/api/v1"
+          },
+          "hostCatalog": {
+            "avatar-a.wbx2.com": [
+              {
+                "host": "avatar-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "hecate-a.wbx2.com": [
+              {
+                "host": "hecate-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "ucc-a.wbx2.com": [
+              {
+                "host": "ucc-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "proximity-a.wbx2.com": [
+              {
+                "host": "proximity-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "retention-a.wbx2.com": [
+              {
+                "host": "retention-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "locus-a.wbx2.com": [
+              {
+                "host": "locus-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "acl-a.wbx2.com": [
+              {
+                "host": "acl-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "conv-a.wbx2.com": [
+              {
+                "host": "conv-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "encryption-a.wbx2.com": [
+              {
+                "host": "encryption-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "hydra-a.wbx2.com": [
+              {
+                "host": "hydra-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "metrics-a.wbx2.com": [
+              {
+                "host": "metrics-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "files-api-a.wbx2.com": [
+              {
+                "host": "files-api-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "apheleia-a.wbx2.com": [
+              {
+                "host": "apheleia-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "wdm-a.wbx2.com": [
+              {
+                "host": "wdm-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "acl-write-a.wbx2.com": [
+              {
+                "host": "acl-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "feature-a.wbx2.com": [
+              {
+                "host": "feature-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "acl-read-a.wbx2.com": [
+              {
+                "host": "acl-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "janus-a.wbx2.com": [
+              {
+                "host": "janus-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "mercury-connection-a.wbx2.com": [
+              {
+                "host": "mercury-connection-a.wbx2.com",
+                "ttl": -1,
+                "priority": 6
+              },
+              {
+                "host": "mercury-connection-a5.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "remote-dispatcher-a.wbx2.com": [
+              {
+                "host": "remote-dispatcher-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "argonaut-a.wbx2.com": [
+              {
+                "host": "argonaut-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "raindrop-a.wbx2.com": [
+              {
+                "host": "raindrop-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "board-a.wbx2.com": [
+              {
+                "host": "board-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "atlas-a.wbx2.com": [
+              {
+                "host": "atlas-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "identity.webex.com": [
+              {
+                "host": "identity.webex.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "hercules-a.wbx2.com": [
+              {
+                "host": "hercules-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "calliope-a.wbx2.com": [
+              {
+                "host": "calliope-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "client-upgrade-a.wbx2.com": [
+              {
+                "host": "client-upgrade-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "mashups-a.wbx2.com": [
+              {
+                "host": "mashups-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "lyra-a.wbx2.com": [
+              {
+                "host": "lyra-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "calendar-a.wbx2.com": [
+              {
+                "host": "calendar-a.wbx2.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ],
+            "idbroker.webex.com": [
+              {
+                "host": "idbroker.webex.com",
+                "ttl": -1,
+                "priority": 5
+              }
+            ]
+          }
+        },
+        "userId": "f898c287-de12-4d5b-a7d7-1fbc5acb4f55"
+      }
+    }
+  ]
+}
