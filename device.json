@@ -3,8 +3,8 @@
     {
       "id": "4c72c36b4bfd44358d34f06637adf360",
       "device": {
-        "url": "https://wdm-a.wbx2.com/wdm/api/v1/devices/9c08c42f-999b-4d95-bec1-f18dfc291126",
-        "webSocketUrl": "wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/0634da73-1b8d-4320-a5ab-2cdc0c3fee54/messages",
+        "url": "https://wdm-a.wbx2.com/wdm/api/v1/devices/654d2599-e3ca-40f9-a0d2-bda29ed91baa",
+        "webSocketUrl": "wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/d9e11fb8-cb43-45f2-bc71-0e99f079d8f5/messages",
         "services": {
           "conversationServiceUrl": "https://conv-a.wbx2.com/conversation/api/v1",
           "roomServiceUrl": "https://lyra-a.wbx2.com/lyra/api/v1",
@@ -80,7 +80,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -198,7 +198,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -228,7 +228,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -246,7 +246,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -254,7 +254,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -262,7 +262,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -523,7 +523,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -802,7 +802,7 @@
               "key": "bridge-max-conv-participants",
               "val": "25",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -1017,7 +1017,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1498,7 +1498,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -1517,7 +1517,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1580,7 +1580,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1654,7 +1654,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1770,7 +1770,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1789,7 +1789,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -1819,7 +1819,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -1871,7 +1871,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -1879,7 +1879,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2019,7 +2019,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -2104,7 +2104,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2112,7 +2112,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2141,7 +2141,7 @@
               "key": "locus-max-roster-participants",
               "val": "3",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2226,14 +2226,14 @@
               "value": false,
               "val": "false",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
               "key": "meet-url-max-conv-participants",
               "val": "0",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2241,7 +2241,7 @@
               "value": false,
               "val": "false",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2260,7 +2260,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2268,7 +2268,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.606Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2287,7 +2287,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2295,7 +2295,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2303,7 +2303,7 @@
               "value": false,
               "val": "false",
               "mutable": false,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2399,7 +2399,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -2407,7 +2407,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -2415,7 +2415,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2423,7 +2423,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.398Z",
               "type": "DEV"
             },
             {
@@ -2612,7 +2612,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2738,7 +2738,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2767,7 +2767,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2873,7 +2873,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-10T05:37:51.607Z",
+              "lastModified": "2017-08-11T05:39:04.397Z",
               "type": "DEV"
             },
             {
@@ -2892,7 +2892,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2900,7 +2900,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "DEV"
             },
             {
@@ -2921,7 +2921,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-11T04:02:13.047Z",
+              "lastModified": "2017-08-11T13:42:59.791Z",
               "type": "DEV"
             },
             {
@@ -2929,7 +2929,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-11T04:02:13.047Z",
+              "lastModified": "2017-08-11T13:42:59.791Z",
               "type": "DEV"
             },
             {
@@ -2937,7 +2937,7 @@
               "value": true,
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-08-11T04:02:13.047Z",
+              "lastModified": "2017-08-11T13:42:59.791Z",
               "type": "DEV"
             }
           ],
@@ -2947,7 +2947,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.805Z",
               "type": "USER"
             },
             {
@@ -2955,7 +2955,7 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "USER"
             },
             {
@@ -2963,13 +2963,13 @@
               "value": true,
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-08-11T04:02:13.097Z",
+              "lastModified": "2017-08-11T13:42:59.806Z",
               "type": "USER"
             }
           ]
         },
-        "creationTime": "2017-08-11T04:02:13.047Z",
-        "modificationTime": "2017-08-11T04:02:13.047Z",
+        "creationTime": "2017-08-11T13:42:59.791Z",
+        "modificationTime": "2017-08-11T13:42:59.791Z",
         "deviceSettings": {},
         "deviceSettingsString": "{}",
         "showSupportText": false,
