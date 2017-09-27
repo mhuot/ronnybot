@@ -29,7 +29,7 @@ const Comparators = opennms.API.Comparators;
 const Filter = opennms.API.Filter;
 const Restriction = opennms.API.Restriction;
 
-const connection = () => new Client().connect('Home', 'http://centos6-1.local:8980/opennms', 'admin', 'admin');
+const connection = () => new Client().connect('Home', 'https://demo.opennms.org/opennms', 'demo', 'demo');
 
 const alarmCount = () => connection().then(client =>
   client.alarms().find().then(alarms => `There are #{alarms.length} alarms.`)
