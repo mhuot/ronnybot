@@ -29,41 +29,31 @@ const Comparators = opennms.API.Comparators;
 const Filter = opennms.API.Filter;
 const Restriction = opennms.API.Restriction;
 
-const connection = () => new Client().connect('Home', 'https://demo.opennms.org/opennms', 'demo', 'demo');
+const connection = async() => new Client().connect('Home', 'https://demo.opennms.org/opennms', 'demo', 'demo');
 
-const alarmCount = () => connection().then(client =>
-  client.alarms().find().then(alarms => `There are #{alarms.length} alarms.`)
-  ).catch(err => { throw err; });
+async function showAlarms  () {
+  try {
+    const client = await connection();
+    const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.GE, 1));
+    // query all alarms with an ID greater than or equal to 1
+    return await client.alarms().find(filter);
+  } catch (err) {
+    console.error(err);
+  }
+}
 
-const nodeCount = () => connection().then(client =>
-  client.nodes().find().then(nodes => `There are #{nodes.length} nodes`)
-  ).catch(err => { throw err; });
-
-const getNodes = () => connection().then(client =>
-  client.nodes().find().then(nodes)
-  ).catch(err => { throw err; });
-
-const getAlarms = () => connection().then(client =>
-  client.alarms().find().then(alarms)
-  ).catch(err => { throw err; });
-
-function ackalarm(msg) {
-  id = msg.match[1];
-  msg.reply('Let me see if I can find alarm # ' + id);
-  const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.EQ, id));
-  connection().then((client) => {
-    client.alarms().find(filter).then((alarms) => {
-      if(alarms.length = 1) {
-        alarms.forEach((alarm) => {
-          msg.reply('Is this it - ')
-          msg.reply(alarm.description);
-          msg.reply('Please confirm this is the alarm you would like to ack by saying yes.')
-        });
-      } else {
-        msg.reply('Something went wrong.');
-      }
-    });
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
   });
+}
+
+async function add1(x) {
+  const a = await resolveAfter2Seconds(20);
+  const b = await resolveAfter2Seconds(30);
+  return x + a + b;
 }
 
 //////// Bot Kit //////
@@ -97,34 +87,6 @@ controller.hears('hello', 'direct_message,direct_mention', function (bot, messag
     bot.reply(message, 'Hi');
 });
 
-controller.hears('get alarms', 'direct_message,direct_mention', function (bot, message) {
-  bot.startConversation(message, (errno, convo) => {
-    convo.say('Let me check...');
-    getAlarms().then(alarms => {
-      if (alarms.length > 0) {
-        convo.say('Here are the first 10 --');
-        alarms.forEach(alarm => {
-          convo.say(`Alarm ID ${alarm.id} - ${alarm.description}`);
-        })
-      } else {
-         convo.say(`There are no alarms at this time.`);
-      }
-      convo.say('---');
-    });
-  });
-});
-
-controller.hears('get nodes', 'direct_message,direct_mention', function (bot, message) {
-  bot.startConversation(message, (errno, convo) => {
-    convo.say('Let me check...');
-    getNodes().then(nodes => {                          
-      convo.say('Here are the first 10 --');
-      nodes.forEach(node => {
-        convo.say(`Node ID ${node.id} - ${node.label}`);
-      });
-    });
-  });
-});
 
 controller.on('direct_mention', function (bot, message) {
     bot.reply(message, 'You mentioned me and said, "' + message.text + '"');
@@ -132,4 +94,24 @@ controller.on('direct_mention', function (bot, message) {
 
 controller.on('direct_message', function (bot, message) {
     bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
+});
+
+controller.on('direct_message', function (bot, message) {
+    bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
+});
+
+controller.hears('show alarms', 'direct_message,direct_mention', function (bot, message) {
+  showAlarms().then(alarms => {
+    bot.startConversation(message, (errno, convo) => {
+      convo.say(`Number of alarms ${alarms.length}`);
+      if(alarms.length = 1) {
+        convo.say('Here are the alarms - ');
+        alarms.forEach((alarm) => {
+          convo.say(alarm.description);
+        });
+      } else {
+        msg.reply('Something went wrong.');
+      }
+    });
+  });
 });
