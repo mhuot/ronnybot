@@ -3,8 +3,8 @@
     {
       "id": "4c72c36b4bfd44358d34f06637adf360",
       "device": {
-        "url": "https://wdm-a.wbx2.com/wdm/api/v1/devices/f17ad46a-bdd5-4978-b71d-15663913311a",
-        "webSocketUrl": "wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/1aa2f8ca-1929-4f66-b10d-06605f3c5c6a/messages",
+        "url": "https://wdm-a.wbx2.com/wdm/api/v1/devices/afbc4743-ff49-4be0-a1d7-78d323c88304",
+        "webSocketUrl": "wss://mercury-connection-a.wbx2.com/v1/apps/wx2/registrations/096b2397-d8eb-44d8-b6fc-4c6498408c8f/messages",
         "services": {
           "conversationServiceUrl": "https://conv-a.wbx2.com/conversation/api/v1",
           "roomServiceUrl": "https://lyra-a.wbx2.com/lyra/api/v1",
@@ -916,7 +916,7 @@
               "key": "bridge-max-conv-participants",
               "val": "25",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -1855,7 +1855,7 @@
               "key": "ios-important-filter",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -1936,7 +1936,7 @@
               "key": "ios-mentions-filter",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2184,7 +2184,7 @@
               "key": "locus-max-roster-participants",
               "val": "3",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2273,21 +2273,21 @@
               "key": "meet-url-enabled",
               "val": "false",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
               "key": "meet-url-max-conv-participants",
               "val": "0",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
               "key": "meet-url-one-on-one-enabled",
               "val": "false",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2304,7 +2304,7 @@
               "key": "mentions-tab",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2342,7 +2342,7 @@
               "key": "numeric-dialing",
               "val": "false",
               "mutable": false,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2443,7 +2443,7 @@
               "key": "spark-guest-call",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2771,7 +2771,7 @@
               "key": "web-mentions-tab",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2895,14 +2895,14 @@
               "key": "win-mentions-list",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
               "key": "win-mentions-tab",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "DEV"
             },
             {
@@ -2921,21 +2921,21 @@
               "key": "call-initiation",
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-10-08T14:04:57.704Z",
+              "lastModified": "2017-10-08T14:11:56.766Z",
               "type": "DEV"
             },
             {
               "key": "spark",
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-10-08T14:04:57.704Z",
+              "lastModified": "2017-10-08T14:11:56.766Z",
               "type": "DEV"
             },
             {
               "key": "webex-squared",
               "val": "true",
               "mutable": false,
-              "lastModified": "2017-10-08T14:04:57.704Z",
+              "lastModified": "2017-10-08T14:11:56.766Z",
               "type": "DEV"
             }
           ],
@@ -2944,27 +2944,27 @@
               "key": "direct-message-notifications",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.711Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "USER"
             },
             {
               "key": "group-message-notifications",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "USER"
             },
             {
               "key": "mention-notifications",
               "val": "true",
               "mutable": true,
-              "lastModified": "2017-10-08T14:04:57.712Z",
+              "lastModified": "2017-10-08T14:11:56.773Z",
               "type": "USER"
             }
           ]
         },
-        "creationTime": "2017-10-08T14:04:57.704Z",
-        "modificationTime": "2017-10-08T14:04:57.704Z",
+        "creationTime": "2017-10-08T14:11:56.766Z",
+        "modificationTime": "2017-10-08T14:11:56.766Z",
         "deviceSettings": {},
         "deviceSettingsString": "{}",
         "showSupportText": false,

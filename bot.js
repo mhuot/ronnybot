@@ -104,14 +104,15 @@ controller.hears('show alarms', 'direct_message,direct_mention', function (bot, 
   showAlarms().then(alarms => {
     bot.startConversation(message, (errno, convo) => {
       convo.say(`Number of alarms ${alarms.length}`);
-      if(alarms.length = 1) {
+      if(alarms.length > 0) {
         convo.say('Here are the alarms - ');
         alarms.forEach((alarm) => {
-          convo.say(alarm.description);
+          convo.say('```' + alarm.description + '```');
         });
       } else {
         msg.reply('Something went wrong.');
       }
+      convo.say(`That's all folks!`);
     });
   });
 });
