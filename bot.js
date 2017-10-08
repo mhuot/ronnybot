@@ -87,13 +87,16 @@ controller.on('direct_message', function (bot, message) {
 });
 
 controller.hears('show alarms', 'direct_message,direct_mention', function (bot, message) {
+  bot.reply(message, 'Let me get the alarms for you...')
   showAlarms().then(alarms => {
     bot.startConversation(message, (errno, convo) => {
       convo.say(`Number of alarms ${alarms.length}`);
       if(alarms.length > 0) {
         convo.say('Here are the alarms - ');
         alarms.forEach((alarm) => {
-          convo.say('```' + alarm.description + '```');
+          console.log(alarm);
+          convo.say(`Alarm ID - ${alarm.id.toString()}`);
+          convo.say('Alarm description - ' + alarm.description.replace(/\n/gm,""));
         });
       } else {
         msg.reply('Something went wrong.');
