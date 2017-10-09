@@ -8,6 +8,12 @@ if (!accessToken) {
     process.exit(2);
 }
 
+const onmsurl = process.env.OpenNMS_URL ? process.env.OpenNMS_URL : 'https://demo.opennms.org/opennms';
+
+const onmsuser = process.env.OpenNMS_User ? process.env.OpenNMS_User : 'demo';
+
+const onmspw = process.env.OpenNMS_PW ? process.env.OpenNMS_PW : 'demo';
+
 const PORT = process.env.PORT || 3001;
 
 
@@ -29,9 +35,9 @@ const Comparators = opennms.API.Comparators;
 const Filter = opennms.API.Filter;
 const Restriction = opennms.API.Restriction;
 
-const connection = async() => new Client().connect('Home', 'https://demo.opennms.org/opennms', 'demo', 'demo');
+const connection = async() => new Client().connect('Home', onmsurl, onmsuser, onmspw);
 
-async function showAlarms  () {
+async function showAlarms () {
   try {
     const client = await connection();
     const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.GE, 1));
@@ -41,6 +47,29 @@ async function showAlarms  () {
     console.error(err);
   }
 }
+
+async function getAlarm (alarmID) {
+  try {
+    const client = await connection();
+    const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.EQ, alarmID.parseInt));
+    return await client.alarms().find(filter);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+async function ackAlarm (id) {
+  try {
+    const client = await connection();
+    return client.alarms().acknowledge(id, 'onmsbot').then(() => {
+      console.log('Success!');
+      return true;
+    });
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 
 //////// Bot Kit //////
 
@@ -86,17 +115,28 @@ controller.on('direct_message', function (bot, message) {
     bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
 });
 
+controller.hears('ack alarm', 'direct_message,direct_mention', function (bot, message) {
+  bot.startConversation(message, (errno, convo) => {
+    convo.addQuestion('Which one?',function(response,convo) {
+      console.log(ackAlarm(parseInt(response.text, 10)));
+
+      convo.next();
+    },{},'default');
+  });
+});
+
 controller.hears('show alarms', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'Let me get the alarms for you...')
   showAlarms().then(alarms => {
+    console.log(alarms);
     bot.startConversation(message, (errno, convo) => {
       convo.say(`Number of alarms ${alarms.length}`);
       if(alarms.length > 0) {
         convo.say('Here are the alarms - ');
         alarms.forEach((alarm) => {
           console.log(alarm);
-          convo.say(`Alarm ID - ${alarm.id.toString()}`);
-          convo.say('Alarm description - ' + alarm.description.replace(/\n/gm,""));
+          convo.say(`Alarm ID - ${alarm.id.toString()} `);
+          convo.say(`Alarm description - ${alarm.description.replace(/\n/gm,"")}`);
         });
       } else {
         msg.reply('Something went wrong.');
