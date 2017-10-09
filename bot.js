@@ -99,20 +99,29 @@ controller.setupWebserver(PORT, function (err, webserver) {
 //
 
 controller.hears('hello', 'direct_message,direct_mention', function (bot, message) {
-    bot.reply(message, 'Hi');
+  bot.reply(message, 'Hi');
 });
 
+controller.hears('help', 'direct_message,direct_mention', function(bot, message){
+  bot.reply(message, 'I currently support the following commands -');
+  bot.reply(message, 'show alarms');
+  bot.reply(message, 'ack alarm');
+}); 
+
+controller.hears('settings', 'direct_message', function(bot, message) { 
+  bot.reply(message, `OpenNMS_URL is set for ${onmsurl}`);
+});
 
 controller.on('direct_mention', function (bot, message) {
-    bot.reply(message, 'You mentioned me and said, "' + message.text + '"');
+  bot.reply(message, 'You mentioned me and said, "' + message.text + '"');
 });
 
 controller.on('direct_message', function (bot, message) {
-    bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
+  bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
 });
 
 controller.on('direct_message', function (bot, message) {
-    bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
+  bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
 });
 
 controller.hears('ack alarm', 'direct_message,direct_mention', function (bot, message) {
@@ -128,20 +137,33 @@ controller.hears('ack alarm', 'direct_message,direct_mention', function (bot, me
 controller.hears('show alarms', 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'Let me get the alarms for you...')
   showAlarms().then(alarms => {
-    console.log(alarms);
     bot.startConversation(message, (errno, convo) => {
       convo.say(`Number of alarms ${alarms.length}`);
-      if(alarms.length > 0) {
+      if(alarms.length > 0 && alarms.length <= 10) {
         convo.say('Here are the alarms - ');
         alarms.forEach((alarm) => {
-          console.log(alarm);
           convo.say(`Alarm ID - ${alarm.id.toString()} `);
           convo.say(`Alarm description - ${alarm.description.replace(/\n/gm,"")}`);
         });
+        convo.say(`That's all folks!`);
+      } else if (alarms.length > 10) {
+        bot.startConversation(message, (errno, convo) => {
+          convo.addQuestion('There are more than 10 alarms, should I just show the most recent 10?',function(response,convo) {
+            if (response.text.match(/yes/i)) {
+              for ( var i=0; i < 10; i++) {
+                convo.say(`Alarm ID - ${alarms[i].id.toString()}`);
+                convo.say(`Alarm description - ${alarms[i].description.replace(/\n/gm,"")}`);
+              }
+              convo.say(`That's all folks!`);
+            } else {
+              convo.say('I do not know what to do.');
+            }
+            convo.next();
+            },{},'default');
+        }); 
       } else {
         msg.reply('Something went wrong.');
       }
-      convo.say(`That's all folks!`);
     });
   });
 });
