@@ -8,14 +8,10 @@ if (!accessToken) {
     process.exit(2);
 }
 
-const onmsurl = process.env.OpenNMS_URL ? process.env.OpenNMS_URL : 'https://demo.opennms.org/opennms';
-
-const onmsuser = process.env.OpenNMS_User ? process.env.OpenNMS_User : 'demo';
-
-const onmspw = process.env.OpenNMS_PW ? process.env.OpenNMS_PW : 'demo';
-
-const domain = process.env.SPARK_DOMAIN ? process.env.SPARK_DOMAIN : 'opennms.org';
-
+const onmsurl = process.env.OpenNMS_URL || 'https://demo.opennms.org/opennms';
+const onmsuser = process.env.OpenNMS_User || 'demo';
+const onmspw = process.env.OpenNMS_PW || 'demo';
+const domain = process.env.SPARK_DOMAIN || 'opennms.org';
 const PORT = process.env.PORT || 3001;
 
 
