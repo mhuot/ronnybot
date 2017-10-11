@@ -4,26 +4,24 @@ const Botkit = require('botkit');
 
 const accessToken = process.env.SPARK_TOKEN;
 if (!accessToken) {
-    console.log("No Cisco Spark access token found in env variable SPARK_TOKEN");
-    process.exit(2);
+  console.log("No Cisco Spark access token found in env variable SPARK_TOKEN");
+  process.exit(2);
 }
 
 const onmsurl = process.env.OpenNMS_URL || 'https://demo.opennms.org/opennms';
 const onmsuser = process.env.OpenNMS_User || 'demo';
 const onmspw = process.env.OpenNMS_PW || 'demo';
-const domain = process.env.SPARK_DOMAIN || 'opennms.org';
 const PORT = process.env.PORT || 3001;
-
+const domain = process.env.SPARK_DOMAIN;
 
 // Spark Websocket Intialization
 sparkwebsocket = new SparkWebSocket(accessToken);
 sparkwebsocket.connect(function (err, res) {
-    if (!err) {
-        sparkwebsocket.setWebHookURL("http://localhost:" + PORT + "/ciscospark/receive");
-    }
-    else {
-        console.log("Error starting up websocket: " + err);
-    }
+  if (!err) {
+    sparkwebsocket.setWebHookURL("http://localhost:" + PORT + "/ciscospark/receive");
+  } else {
+    console.log("Error starting up websocket: " + err);
+  }
 })
 
 //////// OpenNMS //////
@@ -71,25 +69,33 @@ async function ackAlarm (id) {
 
 //////// Bot Kit //////
 
-const controller = Botkit.sparkbot({
+if (domain) {
+  const controller = Botkit.sparkbot({
     debug: true,
     log: true,
     public_address: "https://localhost",
     ciscospark_access_token: accessToken,
     limit_to_domain: [ domain, '@sparkbot.io' ]
-});
+  });  
+} else {
+  const controller = Botkit.sparkbot({
+    debug: true,
+    log: true,
+    public_address: "https://localhost",
+    ciscospark_access_token: accessToken
+  });
+}
+
 
 const bot = controller.spawn({
 });
 
 controller.setupWebserver(PORT, function (err, webserver) {
-
-    //setup incoming webhook handler
-    webserver.post('/ciscospark/receive', function (req, res) {
-        res.sendStatus(200)
-        controller.handleWebhookPayload(req, res, bot);
-    });
-
+  //setup incoming webhook handler
+  webserver.post('/ciscospark/receive', function (req, res) {
+      res.sendStatus(200)
+      controller.handleWebhookPayload(req, res, bot);
+  });
 });
 
 

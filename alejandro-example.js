@@ -1,3 +1,4 @@
+// Example code of opennms.js using async/await by Alejandro Galue(THANK YOU ALEJANDRO!)
 const opennms = require('opennms/dist/opennms.node');
 
 const Client = opennms.Client;
