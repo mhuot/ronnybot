@@ -14,6 +14,8 @@ const onmsuser = process.env.OpenNMS_User ? process.env.OpenNMS_User : 'demo';
 
 const onmspw = process.env.OpenNMS_PW ? process.env.OpenNMS_PW : 'demo';
 
+const domain = process.env.SPARK_DOMAIN ? process.env.SPARK_DOMAIN : 'opennms.org';
+
 const PORT = process.env.PORT || 3001;
 
 
@@ -77,7 +79,8 @@ const controller = Botkit.sparkbot({
     debug: true,
     log: true,
     public_address: "https://localhost",
-    ciscospark_access_token: accessToken
+    ciscospark_access_token: accessToken,
+    limit_to_domain: [ domain, '@sparkbot.io' ]
 });
 
 const bot = controller.spawn({
@@ -135,6 +138,7 @@ controller.hears('ack alarm', 'direct_message,direct_mention', function (bot, me
 });
 
 controller.hears('show alarms', 'direct_message,direct_mention', function (bot, message) {
+  console.log(message);
   bot.reply(message, 'Let me get the alarms for you...')
   showAlarms().then(alarms => {
     bot.startConversation(message, (errno, convo) => {
