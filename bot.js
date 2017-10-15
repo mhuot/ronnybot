@@ -184,8 +184,31 @@ controller.hears('^ack alarm$', 'direct_message,direct_mention', function (bot, 
 });
 
 controller.hears('^alarm ([a-zA-Z]+) ([0-9]+)$', 'direct_message,direct_mention', function(bot, message) {
-  const action = message.match[1];
   const id = message.match[2];
+  const action = (() => {
+    switch(message.match[1]) {
+      case "unack":
+        return "unacknowledge";
+        break;
+      case "create":
+        return "createTicket";
+        break;
+      case "update":
+        return "triggerTicketUpdate";
+        break;
+      case "close":
+        return "closetTicket";
+        break;
+      case "deleteSticky":
+        return "deleteStickyMemo";
+        break;
+      case "deleteJournal":
+        return "deleteStickyMemo";
+        break;
+      default:
+        return message.match[1];
+    }
+  })();
   console.log(`I will send a ${action} for alarm ID ${id}`);
   createAlarmAction(action, parseInt(id,10), message.user).then(resp => {
     bot.startConversation(message, (errno, convo) => {
