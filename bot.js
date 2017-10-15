@@ -17,6 +17,7 @@ const onmspw = process.env.OpenNMS_PW || botConfig.OpenNMS_PW;
 const PORT = process.env.PORT || 3001;
 const domain = process.env.SPARK_DOMAIN || botConfig.SPARK_DOMAIN;
 const botadmin = process.env.botadmin || botConfig.botadmin;
+if (domain) { domain.push('sparkbot.io'); } //workaround for issue with the spark botkit middle ware not excluding the messages from the bot
 
 console.log(onmsurl);
 
@@ -39,7 +40,7 @@ const Restriction = opennms.API.Restriction;
 
 const connection = async() => new Client().connect('Home', onmsurl, onmsuser, onmspw);
 
-async function showAlarms () {
+async function getAlarms () {
   try {
     const client = await connection();
     const filter = new Filter().withOrRestriction(new Restriction('id', Comparators.GE, 1));
@@ -78,7 +79,7 @@ async function createAlarmAction (name, id, user) {
 
 const controller = 
   domain ? 
-    Botkit.sparkbot({debug: true, log: true, public_address: "https://localhost", ciscospark_access_token: accessToken, limit_to_domain: [ domain, '@sparkbot.io' ] })  
+    Botkit.sparkbot({debug: true, log: true, public_address: "https://localhost", ciscospark_access_token: accessToken, limit_to_domain: domain })  
     : Botkit.sparkbot({debug: true, log: true, public_address: "https://localhost", ciscospark_access_token: accessToken });
 
 
@@ -110,17 +111,18 @@ controller.hears('help', 'direct_message,direct_mention', function(bot, message)
   bot.startConversation(message, (errno, convo) => {
     convo.say('I currently support the following commands -');
     convo.say('show alarms [options]');
-    //convo.say('ack alarm <id>');
+    convo.say('ack alarm <id>');
     convo.say('shutdown [options]');
     convo.say
   });
 }); 
 
 controller.hears(['^settings$', '^show settings$'], 'direct_message', function(bot, message) { 
+  const settings = [`OpenNMS_URL is set for ${onmsurl}`, `OpenNMS user is set for ${onmsuser}` ];
+  domain ? settings.push(`Spark limit_to_domain is set to ${domain.join(', ')}`) : settings.push('Spark limit_to_domain is not set')
   bot.startConversation(message, (errno, convo) => {
-    convo.say(`OpenNMS_URL is set for ${onmsurl}`);
-    convo.say(`OpenNMS user is set for ${onmsuser}`);
-    convo.say(`Spark limit_to_domain is set for ${domain}`);
+    convo.say(settings.join('<br>'));
+    convo.next();
   });
 });
 
@@ -158,18 +160,17 @@ controller.hears(['^shutdown -h now$'],'direct_message',function(bot, message) {
   });
 });
 
-controller.on('direct_mention', function (bot, message) {
-  bot.reply(message, 'You mentioned me and said, "' + message.text + '"');
-});
+// controller.on('direct_mention', function (bot, message) {
+//   bot.reply(message, 'You mentioned me and said, "' + message.text + '"');
+// });
 
-controller.on('direct_message', function (bot, message) {
-  bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
-});
+// controller.on('direct_message', function (bot, message) {
+//   bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
+// });
 
 controller.hears('^ack alarm ([0-9]+)$', 'direct_message,direct_mention', function (bot, message) {
   bot.startConversation(message, (errno, convo) => {
-    convo.say(`OK, I will ack alarm ID ${message.match[1]}`);
-    console.log(ackAlarm(parseInt(message.match[1], 10),message.user));
+    ackAlarm(parseInt(message.match[1], 10),message.user).then( convo.say(`OK, I will ack alarm ID ${message.match[1]}`) );
     convo.next();
   });
 });
@@ -177,7 +178,7 @@ controller.hears('^ack alarm ([0-9]+)$', 'direct_message,direct_mention', functi
 controller.hears('^ack alarm$', 'direct_message,direct_mention', function (bot, message) {
   bot.startConversation(message, (errno, convo) => {
     convo.addQuestion('Which one?',function(response,convo) {
-      console.log(ackAlarm(parseInt(response.text, 10),message.user));
+      ackAlarm(parseInt(response.text, 10),message.user).then( convo.say(`OK, I will ack alarm ID ${response.text}`));
       convo.next();
     },{},'default');
   });
@@ -219,7 +220,7 @@ controller.hears('^alarm ([a-zA-Z]+) ([0-9]+)$', 'direct_message,direct_mention'
 });
 
 controller.hears(['show alarms count', 'alarms count'], 'direct_message,direct_mention', function (bot, message) {
-  showAlarms().then(alarms => {
+  getAlarms().then(alarms => {
     bot.startConversation(message, (errno, convo) => {
       convo.say(`Number of alarms ${alarms.length}`);
       convo.next();
@@ -227,36 +228,30 @@ controller.hears(['show alarms count', 'alarms count'], 'direct_message,direct_m
   });
 });
 
-controller.hears(['^show alarms$', '^alarms$'], 'direct_message,direct_mention', function (bot, message) {
+controller.hears(['^show alarms$', '^alarms$', '^alarms all$'], 'direct_message,direct_mention', function (bot, message) {
   bot.reply(message, 'Let me get the alarms for you...')
-  showAlarms().then(alarms => {
+  getAlarms().then(alarms => {
+    const length = alarms.length;
+    const limit = 10;
     bot.startConversation(message, (errno, convo) => {
-      convo.say(`Number of alarms ${alarms.length}`);
-      if(alarms.length > 0 && alarms.length <= 10) {
+      convo.say(`Number of alarms ${length}`);
+      if((length > 0 && length <= limit) || message.text === 'alarms all') {
         convo.say('Here are the alarms - ');
-        alarms.forEach((alarm) => {
-          convo.say(`Alarm ID - ${alarm.id.toString()} `);
-          convo.say(`Alarm description - ${alarm.description.replace(/\n/gm,"")}`);
-        });
-        convo.say(`That's all folks!`);
-      } else if (alarms.length > 10) {
+        sayAlarms(convo, alarms, length);
+      } else if (length > limit) {
         bot.startConversation(message, (errno, convo) => {
-          convo.ask('There are more than 10 alarms, should I just show the most recent 10?',[
+          convo.ask(`There are more than ${limit} alarms, should I just show the most recent ${limit}?`,[
             {
               pattern: bot.utterances.yes,
               callback: function(response, convo) {
-                for ( var i=0; i < 10; i++) {
-                  convo.say(`Alarm ID - ${alarms[i].id.toString()}`);
-                  convo.say(`Alarm description - ${alarms[i].description.replace(/\n/gm,"")}`);
-                }
-                convo.say(`That's all folks!`);
+                sayAlarms(convo, alarms, limit);
                 convo.next();
               }
             },{
               pattern: bot.utterances.no,
               default: true,
               callback: function(response, convo) {
-                convo.say('I have not been toild how to respond');
+                convo.say('I have not been told how to respond');
                 convo.next();
               }
             }
@@ -268,4 +263,17 @@ controller.hears(['^show alarms$', '^alarms$'], 'direct_message,direct_mention',
     });
   });
 });
+
+async function sayAlarms (convo, alarms, limit) {
+  const alarmMarkdown = [];
+  const alarmText = [];
+  for ( var i=0; i < limit; i++) {
+    const desc = alarms[i].description.replace(/(<(?:.|\n)*?>)|\n/gm, '').replace(/\s\s+/g, ' ');
+    alarmText.push(`Alarm ID - ${alarms[i].id.toString()}\nAlarm descrption - ${desc}\n`);
+    alarmMarkdown.push(`Alarm ID - ${alarms[i].id.toString()}<br>Alarm description - ${desc} <hr>`);
+  }
+  console.log(`Text - ${alarmText.join('')}`);
+  console.log(`Markdown - ${alarmMarkdown.join('')}`);
+  convo.say({text: alarmText.join(''), markdown: alarmMarkdown.join('')});  
+}
 
