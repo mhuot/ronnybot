@@ -166,11 +166,18 @@ controller.on('direct_message', function (bot, message) {
   bot.reply(message, 'I got your private message. You said, "' + message.text + '"');
 });
 
-controller.hears('^ack alarm\s?(\d+)?$', 'direct_message,direct_mention', function (bot, message) {
+controller.hears('^ack alarm ([0-9]+)$', 'direct_message,direct_mention', function (bot, message) {
+  bot.startConversation(message, (errno, convo) => {
+    convo.say(`OK, I will ack alarm ID ${message.match[1]}`);
+    console.log(ackAlarm(parseInt(message.match[1], 10),message.user));
+    convo.next();
+  });
+});
+
+controller.hears('^ack alarm$', 'direct_message,direct_mention', function (bot, message) {
   bot.startConversation(message, (errno, convo) => {
     convo.addQuestion('Which one?',function(response,convo) {
       console.log(ackAlarm(parseInt(response.text, 10),message.user));
-
       convo.next();
     },{},'default');
   });
