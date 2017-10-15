@@ -1,0 +1,5 @@
+{
+  "OpenNMS_URL" : "https://demo.opennms.org/opennms",
+  "OpenNMS_User" : "demo",
+  "OpenNMS_PW" : "demo"
+}

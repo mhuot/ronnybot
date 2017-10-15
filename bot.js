@@ -177,9 +177,12 @@ controller.hears('ack alarm', 'direct_message,direct_mention', function (bot, me
 });
 
 controller.hears('^alarm ([a-zA-Z]+) ([0-9]+)$', 'direct_message,direct_mention', function(bot, message) {
-  console.log(`I will send a ${message.match[1]} for alarm ID ${message.match[2]}`);
-  createAlarmAction(message.match[1], parseInt(message.match[2],10), message.user).then(resp => {
+  const action = message.match[1];
+  const id = message.match[2];
+  console.log(`I will send a ${action} for alarm ID ${id}`);
+  createAlarmAction(action, parseInt(id,10), message.user).then(resp => {
     bot.startConversation(message, (errno, convo) => {
+      convo.say(`I will send a ${action} for alarm ID ${id}.`);
       convo.stop();
     });
   }).catch( err => {throw err;});
