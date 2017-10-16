@@ -15,8 +15,9 @@ const onmsurl = process.env.OpenNMS_URL || botConfig.OpenNMS_URL;
 const onmsuser = process.env.OpenNMS_User || botConfig.OpenNMS_User;
 const onmspw = process.env.OpenNMS_PW || botConfig.OpenNMS_PW;
 const PORT = process.env.PORT || 3001;
-const domain = process.env.SPARK_DOMAIN || botConfig.SPARK_DOMAIN;
 const botadmin = process.env.botadmin || botConfig.botadmin;
+const domain = []
+domain.push(process.env.SPARK_DOMAIN || botConfig.SPARK_DOMAIN);
 if (domain) { domain.push('sparkbot.io'); } //workaround for issue with the spark botkit middle ware not excluding the messages from the bot
 
 console.log(onmsurl);
