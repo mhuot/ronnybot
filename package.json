@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "botkit": "^0.5.7",
+    "botkit": "git://github.com/mhuot/botkit#issue-1092",
     "ciscospark-websocket-events": "^1.2.0",
     "jsonfile": "^4.0.0",
     "opennms": "^1.0.0-beta.1"

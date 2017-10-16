@@ -265,15 +265,14 @@ controller.hears(['^show alarms$', '^alarms$', '^alarms all$'], 'direct_message,
 });
 
 async function sayAlarms (convo, alarms, limit) {
-  const alarmMarkdown = [];
+  console.log(`sayAlarms with limit of ${limit}`);
+  const alarmHTML = [];
   const alarmText = [];
   for ( var i=0; i < limit; i++) {
     const desc = alarms[i].description.replace(/(<(?:.|\n)*?>)|\n/gm, '').replace(/\s\s+/g, ' ');
-    alarmText.push(`Alarm ID - ${alarms[i].id.toString()}\nAlarm descrption - ${desc}\n`);
-    alarmMarkdown.push(`Alarm ID - ${alarms[i].id.toString()}<br>Alarm description - ${desc} <hr>`);
+    alarmText.push(`Alarm ID - ${alarms[i].id.toString()} \n Alarm description - ${desc}\n\n`);
+    alarmHTML.push(`Alarm ID - ${alarms[i].id.toString()}<br>Alarm description - ${desc} <hr>`);
   }
-  console.log(`Text - ${alarmText.join('')}`);
-  console.log(`Markdown - ${alarmMarkdown.join('')}`);
-  convo.say({text: alarmText.join(''), markdown: alarmMarkdown.join('')});  
+  convo.say({text: alarmHTML.join('')});  
 }
 
